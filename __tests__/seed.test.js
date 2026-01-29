@@ -4,6 +4,7 @@ const createSchema = require('../db/create_schema');
 
 beforeAll(async () => {
   await createSchema();
+  await seedTables();
 });
 
 afterAll(() => db.end());
