@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS news_app;
+
+CREATE DATABASE news_app;
+

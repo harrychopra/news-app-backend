@@ -1,5 +1,5 @@
 const db = require('./connection');
-const data = require(`./seed_data/${process.env.NODE_ENV}/index`);
+const data = require(`./${process.env.NODE_ENV}/seed-data/index`);
 
 async function insert(tableName, rows) {
   if (rows.length === 0) return [];

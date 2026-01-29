@@ -21,7 +21,7 @@ async function createSchema() {
     create table users (
         username varchar(25) primary key not null,
         name varchar(50) not null,
-        avatar_url varchar(100)
+        avatar_url varchar(200)
     )`);
 
   await db.query(`--sql

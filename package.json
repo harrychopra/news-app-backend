@@ -18,8 +18,10 @@
     "jest-extended": "^7.0.0"
   },
   "scripts": {
-    "setup-dbs": "docker exec -i pg14 psql -U root < ./db/create_dbs.sql",
+    "setup-test-db": "docker exec -i pg14 psql -U root < ./db/test/create-db.sql",
     "test-seed": "jest seed.test.js",
-    "psql": "docker exec -it pg14 psql -U root -d"
+    "setup-db": "docker exec -i pg14 psql -U root < ./db/development/create-db.sql",
+    "seed": "node ./db/seed.js",
+    "psql": "docker exec -it pg14 psql -U root"
   }
 }

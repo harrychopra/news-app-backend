@@ -1,6 +1,6 @@
 const db = require('../db/connection');
-const seedTables = require('../db/seed_tables');
-const createSchema = require('../db/create_schema');
+const seedTables = require('../db/insert-data');
+const createSchema = require('../db/create-schema');
 
 beforeAll(async () => {
   await createSchema();
