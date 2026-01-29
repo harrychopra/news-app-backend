@@ -21,14 +21,14 @@ async function createSchema() {
     create table users (
         username varchar(25) primary key not null,
         name varchar(50) not null,
-        avatar_url varchar(200)
+        avatar_url varchar(1000)
     )`);
 
   await db.query(`--sql
     create table topics (
         slug varchar(25) primary key,
         description varchar(100) not null,
-        img_url varchar(150)
+        img_url varchar(1000)
     )`);
 
   await db.query(`--sql
@@ -38,9 +38,9 @@ async function createSchema() {
         topic  varchar(25)  not null references topics(slug),
         author varchar(25)  not null references users(username),
         body text  not null,
-        created_at timestamp default now(),
+        created_at timestamp default current_timestamp,
         votes int default 0,
-        article_img_url varchar(150)
+        article_img_url varchar(1000)
     )`);
 
   await db.query(`--sql
@@ -50,7 +50,7 @@ async function createSchema() {
         body text not null,
         votes int default 0,
         author varchar(25) not null references users(username),
-        created_at timestamp default now()
+        created_at timestamp default current_timestamp
     )`);
 }
 
