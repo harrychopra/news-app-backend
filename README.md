@@ -18,6 +18,10 @@ A RESTful API backend for a social news platform, built with Node.js. This API p
 - **Authentication:**
 - **Validation:**
 
+## Schema/ ERD
+
+![Entity Relationship Diagram](./assets/erd.png "Entity Relationship Diagram")
+
 ## Installation
 
 ```bash
