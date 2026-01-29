@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,5 +16,10 @@
     "husky": "^9.1.7",
     "jest": "^30.2.0",
     "jest-extended": "^7.0.0"
+  },
+  "scripts": {
+    "setup-dbs": "docker exec -i pg14 psql -U root < ./db/create_dbs.sql",
+    "test-seed": "jest seed.test.js",
+    "psql": "docker exec -it pg14 psql -U root -d"
   }
 }
