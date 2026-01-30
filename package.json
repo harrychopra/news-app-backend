@@ -22,6 +22,7 @@
     "test-seed": "jest seed.test.js",
     "setup-db": "docker exec -i pg14 psql -U root < ./db/development/create-db.sql",
     "seed": "node ./db/seed.js",
-    "psql": "docker exec -it pg14 psql -U root"
+    "psql": "docker exec -it pg14 psql -U root",
+    "prepare": "husky"
   }
 }
